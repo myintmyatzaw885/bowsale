@@ -378,14 +378,26 @@ html {
     margin-top: 2rem;
 }
 
-#sale .sale-container .sale-second-side .sale ul li {
-    background: var(--gray-color);
+#sale .sale-container .sale-second-side #bow ul li,
+#sale .sale-container .sale-second-side #crossbow ul li,
+#sale .sale-container .sale-second-side #arrow ul li,
+#sale .sale-container .sale-second-side #accessory ul li {
+    background: none;
     font-size: 1.5rem;
     font-weight: 600;
     padding: .5rem 1.5rem;
     border: .1rem solid var(--second-gray-color);
     text-transform: capitalize;
     cursor: pointer;
+}
+
+#sale .sale-container .sale-second-side #bow ul .active,
+#sale .sale-container .sale-second-side #crossbow ul .active,
+#sale .sale-container .sale-second-side #arrow ul .active,
+#sale .sale-container .sale-second-side #accessory ul .active {
+    background: var(--black-color);
+    color: var(--white-color);
+    border: .1rem solid var(--black-color);
 }
 
 #sale .sale-container .sale-second-side .sale .box-container {
@@ -845,16 +857,10 @@ footer article p b {
 
 @media(max-width:700px) {
     #navbar {
-        height: 13.2rem;
+        height: 10rem;
     }
     #navbar .account-cart .fa-bars {
         display: inline-block;
-    }
-    #navbar .upper-navbar form {
-        position: fixed;
-        left: 0;
-        top: 9rem;
-        margin-left: 1.5%;
     }
     /* toggle start  */
     #navbar .lower-navbar {
@@ -884,6 +890,19 @@ footer article p b {
         padding: 0;
     }
     /* toggle end  */
+}
+
+@media(max-width:600px) {
+    #navbar {
+        height: 13.2rem;
+    }
+    #navbar .upper-navbar form {
+        position: fixed;
+        left: 0;
+        top: 9rem;
+        margin-left: 1.5%;
+        width: 97%;
+    }
 }
 
 @media(max-width:500px) {
@@ -946,7 +965,10 @@ footer article p b {
     #sale .sale-container .sale-second-side {
         padding-left: 0;
     }
-    #sale .sale-container .sale-second-side .sale ul li {
+    #sale .sale-container .sale-second-side #bow ul li,
+    #sale .sale-container .sale-second-side #crossbow ul li,
+    #sale .sale-container .sale-second-side #arrow ul li,
+    #sale .sale-container .sale-second-side #accessory ul li {
         font-size: 1.3rem;
         padding: .5rem .8rem;
     }
