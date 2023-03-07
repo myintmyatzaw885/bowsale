@@ -12,7 +12,9 @@
     --white-color: #ffffff;
     --second-white-color: #f5f5f5;
     --black-color: #333;
+    --second-black-color: #485460;
     --orange-color: #f0932b;
+    --gold-color: #e67e22;
 }
 
 body {
@@ -60,6 +62,7 @@ html {
     width: 30rem;
     height: 3.2rem;
     background: var(--white-color);
+    border-radius: .3rem;
 }
 
 #navbar .upper-navbar form input[type="search"] {
@@ -70,6 +73,7 @@ html {
     padding-left: 1rem;
     background: var(--white-color);
     color: var(--black-color);
+    border-radius: .3rem 0 0 .3rem;
 }
 
 #navbar .upper-navbar form input[type="submit"] {
@@ -81,11 +85,12 @@ html {
     background: var(--orange-color);
     color: var(--white-color);
     cursor: pointer;
-    transition: .1s linear;
+    transition: .2s ease;
+    border-radius: 0 .3rem .3rem 0;
 }
 
 #navbar .upper-navbar form input[type="submit"]:hover {
-    letter-spacing: .1rem;
+    background: var(--gold-color);
 }
 
 #navbar .account-cart {
@@ -93,9 +98,42 @@ html {
     align-items: center;
 }
 
-#navbar .account-cart .fa-user {
+#navbar .account-cart .dropdown-box {
+    position: absolute;
+    top: 8rem;
+    right: 2%;
+    background: var(--second-gray-color);
+    border-radius: .3rem;
+    display: none;
+}
+
+#navbar .account-cart .dropdown-box a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+#navbar .account-cart .dropdown-box a:hover {
+    background: var(--second-black-color);
+}
+
+#navbar .account-cart .dropdown-box a h5 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#navbar .account-cart .dropdown-box a i {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+#navbar .account-cart>.fa-user {
     font-size: 1.7rem;
-    padding-right: 2rem;
+    margin-right: 2rem;
     cursor: pointer;
 }
 
@@ -157,10 +195,11 @@ html {
     padding-right: 2rem;
     font-weight: 700;
     color: var(--black-color);
+    transition: .2s ease;
 }
 
 #navbar .lower-navbar ul li a:hover {
-    color: var(--orange-color);
+    color: var(--gold-color);
 }
 
 
@@ -234,12 +273,12 @@ html {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    transition: .1s linear;
+    border-radius: .3rem;
+    transition: .2s ease;
 }
 
 #home .home-container .slide article a:hover {
-    background: var(--orange-color);
-    letter-spacing: .1rem;
+    background: var(--second-black-color);
 }
 
 #home .home-container .home-image {
@@ -376,6 +415,7 @@ html {
     display: flex;
     list-style: none;
     margin-top: 2rem;
+    border-radius: .3rem;
 }
 
 #sale .sale-container .sale-second-side #bow ul li,
@@ -383,10 +423,10 @@ html {
 #sale .sale-container .sale-second-side #arrow ul li,
 #sale .sale-container .sale-second-side #accessory ul li {
     background: none;
+    color: var(--black-color);
     font-size: 1.5rem;
     font-weight: 600;
-    padding: .5rem 1.5rem;
-    border: .1rem solid var(--second-gray-color);
+    padding: .8rem 1.9rem;
     text-transform: capitalize;
     cursor: pointer;
 }
@@ -395,9 +435,9 @@ html {
 #sale .sale-container .sale-second-side #crossbow ul .active,
 #sale .sale-container .sale-second-side #arrow ul .active,
 #sale .sale-container .sale-second-side #accessory ul .active {
-    background: var(--black-color);
     color: var(--white-color);
-    border: .1rem solid var(--black-color);
+    background: var(--black-color);
+    border-radius: .3rem;
 }
 
 #sale .sale-container .sale-second-side .sale .box-container {
@@ -411,11 +451,13 @@ html {
     height: 40rem;
     background: var(--gray-color);
     margin: 0 1rem 1rem 0;
+    border-radius: .3rem;
 }
 
 #sale .sale-container .sale-second-side .sale .box-container .box .box-image {
     width: 100%;
     height: 60%;
+    border-radius: .3rem .3rem 0 0;
 }
 
 #sale .sale-container .sale-second-side .sale .box-container .box .box-image img {
@@ -429,6 +471,7 @@ html {
     height: 40%;
     padding: 1rem;
     background: var(--second-white-color);
+    border-radius: 0 0 .3rem .3rem;
 }
 
 #sale .sale-container .sale-second-side .sale .box-container .box .box-text a {
@@ -498,6 +541,7 @@ html {
 #video .video-container .video-box video {
     width: 100%;
     height: 220px;
+    border-radius: .3rem;
 }
 
 #video .video-container .video-box .video-title {
@@ -584,11 +628,11 @@ html {
     text-decoration: none;
     color: var(--black-color);
     font-weight: 600;
-    transition: .1s ease;
+    transition: .2s ease;
 }
 
 #contact .contact-container ul li a:hover {
-    color: var(--orange-color);
+    color: var(--gold-color);
 }
 
 
@@ -639,7 +683,7 @@ footer article p b {
 .fa-chevron-up {
     position: fixed;
     bottom: 7%;
-    right: 5%;
+    right: 4.5%;
     background: var(--orange-color);
     color: var(--white-color);
     font-size: 1.5rem;
@@ -647,10 +691,11 @@ footer article p b {
     cursor: pointer;
     transition: .2s ease;
     z-index: 5;
+    border-radius: .3rem;
 }
 
 .fa-chevron-up:hover {
-    transform: scale(1.05);
+    background: var(--gold-color);
 }
 
 

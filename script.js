@@ -6,6 +6,9 @@ $(document).ready(function() {
             $("#navbar").css('position', 'relative');
         }
     });
+    $('#navbar .account-cart>.fa-user').click(function() {
+        $('#navbar .account-cart .dropdown-box').toggle();
+    });
     $('#navbar .account-cart .fa-bars').click(function() {
         $('#navbar .lower-navbar').css('top', '0');
     });
