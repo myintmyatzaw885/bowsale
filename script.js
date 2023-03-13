@@ -35,7 +35,7 @@ $(document).ready(function() {
         });
     };
     $('.home-container').owlCarousel({
-        // autoplay: true,
+        autoplay: true,
         loop: true,
         margin: 10,
         nav: true,
